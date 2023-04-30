@@ -25,7 +25,7 @@ namespace Mini_project2
             string item = textBox1.Text.ToString();
             int price = Int32.Parse(textBox2.Text.ToString());
             int quantity = Int32.Parse(textBox3.Text.ToString());
-            SqlCommand cmd = new SqlCommand("inser into items values(" + id + ",'" + item + "','" + price + "', " + quantity + ")", conn);
+            SqlCommand cmd = new SqlCommand("insert into items values(" + id + ",'" + item + "','" + price + "', " + quantity + ")", conn);
             cmd.ExecuteNonQuery();
             conn.Close();
             textBox1.Clear();
